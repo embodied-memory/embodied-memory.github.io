@@ -280,6 +280,36 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We train both the PerceptionCache and LLM planner on data derived from the <a url="https://aihabitat.org/partnr/">PARTNR benchmark</a>.
+            We then evaluate our method in simulation, using the PARTNR benchmark, and in the real world, using a Spot robot deployed in an indoor environment.
+          </p>
+          <p>
+            Despite training on simulation, our method exhibits non-trivial sim-to-real transfer. The PerceptionCache can recognize and track objects in videos
+            with a precision and recall of 30% and 33% respectively. GPT4-o in comparison achieves 1% and 65% precision and recall respectively. When connected to 
+            the LLM planner, a Spot Robot can successfully complete X% tasks in the real world.
+          </p>
+          
+        </div>
+      </div>
+      <div class="column is-half has-text-centered">
+          <img id="teaser" src="./static/images/perception_results_7.png">
+          </img>
+          
+        </div>
+        
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>

@@ -117,7 +117,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -125,7 +125,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
@@ -214,12 +214,17 @@
     </div>
       <div class="columns is-centered">
       
-        <div class="column is-two-fifths">
+        <div class="column is-half">
+          <p>
           We train a VLM to build a representation of the environment. At each observation the VLM updates its 
-          memory by adding newly seen objects, or updating the information of previously seen objects. This information
-          is represented as text, which an LLM uses to plan actions in the environment. 
+          memory by adding newly seen objects, or updating the information of previously seen objects. 
+         </p>
+         <p></p> 
+          This information is represented as text, which an LLM uses to plan actions in the environment. 
+         
+         </p>
         </div>
-        <div class="column is-three-fifths has-text-centered">
+        <div class="column is-half has-text-centered">
           <img id="teaser" src="./static/images/cache_overview.png">
           </img>
           
@@ -230,8 +235,50 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Improving planning with DDAFT</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a novel approach to finetune LLMs for embodied planning via reward-free RL. Our approach, 
+            DDAFT (Difficulty-Aware Data Augmentation for Fine-Tuning), samples diverse planning trajectories on tasks that 
+            the planning has low success in, and uses task reward to augment the training data.
+          </p>
+          <p>
+            DDAFT improves planning performance across a wide variety of settings, 
+            including with ground-truth perception, outputs from PerceptionCache and on pre-trained LLMs as well or LLMs trained on human planning data.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Training with Human-In-The-Loop Data</h2>
+        <div class="content has-text-justified">
+          <p>
+            We also explore human data to improve planning performance on embodied tasks. Using the HITL data from PARTNR, 
+            we train an LLM to perform planning in partially observed environments. Training with human data improves planning performance,
+            by X% with privileged perception and by Y% with PerceptionCache.
+          </p>
+         
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">

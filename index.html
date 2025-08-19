@@ -215,14 +215,20 @@
       <div class="columns is-centered">
       
         <div class="column is-half">
+          <div class="content has-text-justified">
+        
           <p>
-          We train a VLM to build a representation of the environment. At each observation the VLM updates its 
+          We train a VLM to build and maintaing a representation of the environment for planning. 
+          </p>
+          <p>
+          At each step, the VLM takes the current observation and updates its 
           memory by adding newly seen objects, or updating the information of previously seen objects. 
          </p>
          <p>
           This information is represented as text, which an LLM uses to plan actions in the environment. 
          
          </p>
+        </div>
         </div>
         <div class="column is-half has-text-centered">
           <img id="teaser" src="./static/images/cache_overview.png">
@@ -267,13 +273,13 @@
         <h2 class="title is-3">Training with Human-In-The-Loop Data</h2>
         <div class="content has-text-justified">
           <p>
-            We also explore human data to improve planning performance on embodied tasks. Using the HITL data from PARTNR, 
+            We also explore human data to improve planning performance on embodied tasks. Using the HITL data from the <a href="https://aihabitat.org/partnr/">PARTNR benchmark</a>, 
             we train an LLM to perform planning in partially observed environments. Training with human data improves planning performance,
             by X% with privileged perception and by Y% with PerceptionCache.
           </p>
          
           
-        </div>
+
       </div>
     </div>
     <!--/ Abstract. -->
@@ -288,7 +294,7 @@
         <h2 class="title is-3">Results</h2>
         <div class="content has-text-justified">
           <p>
-            We train both the PerceptionCache and LLM planner on data derived from the <a url="https://aihabitat.org/partnr/">PARTNR benchmark</a>.
+            We train both the PerceptionCache and LLM planner on data derived from the <a href="https://aihabitat.org/partnr/">PARTNR benchmark</a>.
             We then evaluate our method in simulation, using the PARTNR benchmark, and in the real world, using a Spot robot deployed in an indoor environment.
           </p>
           <p>
@@ -299,13 +305,19 @@
           
         </div>
       </div>
-      <div class="column is-half has-text-centered">
+     </div>
+      <div class="columns is-centered has-text-centered">
+    
+      <div class="column is-four-fifths">
           <img id="teaser" src="./static/images/perception_results_7.png">
           </img>
           
-        </div>
+      </div>
         
     </div>
+    <h6 class="subtitle has-text-centered">
+        Results on object detection and tracking for PerceptionCache and other baselines.
+    </h6>
     <!--/ Abstract. -->
   </div>
 </section>

@@ -36,8 +36,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
+  <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
   <script src="./static/js/index.js"></script>
 </head>
 <body>
@@ -210,35 +210,37 @@
       <div class="column is-four-fifths">
       
           <h2 class="title is-3">Perception Cache: A Learnable Memory</h2>
-      </div>
-    </div>
-      <div class="columns is-centered">
-      
-        <div class="column is-half">
           <div class="content has-text-justified">
-        
-          <p>
-          We train a VLM to build and maintaing a representation of the environment for planning. 
+          
+            <p>
+            We train a VLM to build and maintain a representation of the environment for planning. At each step, the VLM takes the agent's current observation, action and state of the memory, and updates its 
+            memory by adding newly seen objects, or updating the information of previously seen objects. 
           </p>
           <p>
-          At each step, the VLM takes the current observation and updates its 
-          memory by adding newly seen objects, or updating the information of previously seen objects. 
-         </p>
-         <p>
-          This information is represented as text, which an LLM uses to plan actions in the environment. 
-         
-         </p>
-        </div>
-        </div>
-        <div class="column is-half has-text-centered">
-          <img id="teaser" src="./static/images/cache_overview.png">
-          </img>
+            This information is represented as text, which an LLM uses to plan actions in the environment. 
           
+          </p>
         </div>
-        
+          <img id="teaser" src="./static/images/cache_overview.png" width="55%" margin="30px"></img>
+          
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="column is-four-fifths">
+      
+    <div class="content has-text-justified"> -->
+        <div class="content has-text-justified">
+          
+    <p>
+      An example trajectory using the PerceptionCache is shown below. As the agent observes the environment, the environment memory is built by adding, updating or removing objects, as seen in the map. This information allows the agent to plan effectively.
+    </p>
     </div>
     <!--/ Paper video. -->
+    <video id="example_traj" autoplay controls muted loop playsinline height="50%">
+        <source src="./static/videos/plot_pcache.mp4" type="video/mp4">
+    </video>
+    </div>
   </div>
+  
 </section>
 
 <section class="section">
@@ -273,10 +275,11 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Training with Human-In-The-Loop Data</h2>
         <div class="content has-text-justified">
+          <br>
           <p>
             We also explore human data to improve planning performance on embodied tasks. Using the HITL data from the <a href="https://aihabitat.org/partnr/">PARTNR benchmark</a>, 
             we train an LLM to perform planning in partially observed environments. Training with human data improves planning performance,
-            by X% with privileged perception and by Y% with PerceptionCache.
+            by a relative 23% with privileged perception and by 20% with the PerceptionCache.
           </p>
          
           
